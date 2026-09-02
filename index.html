@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftCourier - Fast & Secure Parcel Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1E3A8A',
+                        'brand-orange': '#F97316'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-shipping-fast text-2xl text-brand-blue mr-2"></i>
+                        <span class="text-xl font-bold text-brand-blue">SwiftCourier</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-brand-blue hover:text-brand-orange px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#" class="text-gray-700 hover:text-brand-orange px-3 py-2 text-sm font-medium transition-colors">Book Parcel</a>
+                        <a href="#" class="text-gray-700 hover:text-brand-orange px-3 py-2 text-sm font-medium transition-colors">Track Parcel</a>
+                        <a href="#" class="text-gray-700 hover:text-brand-orange px-3 py-2 text-sm font-medium transition-colors">Dashboard</a>
+                        <a href="#" class="bg-brand-blue text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors">Login</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-brand-blue focus:outline-none focus:text-brand-blue" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="text-brand-blue block px-3 py-2 text-base font-medium">Home</a>
+                <a href="#" class="text-gray-700 hover:text-brand-orange block px-3 py-2 text-base font-medium">Book Parcel</a>
+                <a href="#" class="text-gray-700 hover:text-brand-orange block px-3 py-2 text-base font-medium">Track Parcel</a>
+                <a href="#" class="text-gray-700 hover:text-brand-orange block px-3 py-2 text-base font-medium">Dashboard</a>
+                <a href="#" class="bg-brand-blue text-white block px-3 py-2 text-base font-medium rounded-md mx-3 mt-2">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Fast, Secure & Real-Time Parcel Delivery
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 mb-8">
+                        Book and track your shipments across the country with our reliable courier service.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-brand-blue hover:bg-blue-800 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+                            Book Parcel
+                        </button>
+                        <button class="bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+                            Track Now
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 w-full max-w-md">
+                        <div class="text-center">
+                            <i class="fas fa-truck text-8xl text-brand-orange mb-4"></i>
+                            <h3 class="text-2xl font-semibold mb-2">24/7 Delivery</h3>
+                            <p class="text-blue-100">Fast and reliable service nationwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose SwiftCourier?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Experience the best in parcel delivery with our advanced features and reliable service
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Real-Time Tracking</h3>
+                    <p class="text-gray-600">Track your parcel's journey in real-time with GPS-enabled monitoring and instant updates.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-brand-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-money-bill-wave text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Cash on Delivery</h3>
+                    <p class="text-gray-600">Convenient COD support with secure payment collection at your doorstep.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-route text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Optimized Routes</h3>
+                    <p class="text-gray-600">AI-powered route optimization ensures faster delivery and reduced costs.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="bg-brand-orange text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Admin Dashboard</h3>
+                    <p class="text-gray-600">Comprehensive analytics and reporting tools for business insights and management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcel Booking Preview Form -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Book Your Parcel</h2>
+                <p class="text-xl text-gray-600">Quick and easy parcel booking in just a few steps</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Pickup Address</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" placeholder="Enter pickup location">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Delivery Address</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" placeholder="Enter delivery location">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Parcel Size</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                                <option>Small (0-2 kg)</option>
+                                <option>Medium (2-5 kg)</option>
+                                <option>Large (5-10 kg)</option>
+                                <option>Extra Large (10+ kg)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Parcel Type</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                                <option>Documents</option>
+                                <option>Electronics</option>
+                                <option>Clothing</option>
+                                <option>Food Items</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">COD Amount</label>
+                            <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" placeholder="₹ 0">
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-6">
+                        <button type="submit" class="bg-brand-blue hover:bg-blue-800 text-white px-12 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
+                            Book Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Parcel Tracking Map Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Live Parcel Tracking</h2>
+                <p class="text-xl text-gray-600">Monitor your parcel's journey in real-time</p>
+            </div>
+
+            <div class="bg-gray-200 rounded-2xl h-96 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/10 to-brand-orange/10"></div>
+                <div class="text-center z-10">
+                    <i class="fas fa-map text-6xl text-brand-blue mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Live Map Tracking</h3>
+                    <p class="text-gray-600 max-w-md">
+                        Interactive Google Maps integration for real-time parcel location tracking
+                    </p>
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <div class="bg-white rounded-full px-4 py-2 shadow-md">
+                            <i class="fas fa-truck text-brand-orange mr-2"></i>
+                            <span class="text-sm font-medium">In Transit</span>
+                        </div>
+                        <div class="bg-white rounded-full px-4 py-2 shadow-md">
+                            <i class="fas fa-clock text-brand-blue mr-2"></i>
+                            <span class="text-sm font-medium">ETA: 2 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-shipping-fast text-2xl text-brand-orange mr-2"></i>
+                        <span class="text-xl font-bold">SwiftCourier</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Leading courier and parcel management service providing fast, secure, and reliable delivery solutions across the country.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-orange transition-colors">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Home</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Book Parcel</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Track Parcel</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Dashboard</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-brand-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-brand-orange mr-3"></i>
+                            <span class="text-gray-300">+91 98765 43210</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-brand-orange mr-3"></i>
+                            <span class="text-gray-300">info@swiftcourier.com</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-orange mr-3 mt-1"></i>
+                            <span class="text-gray-300">123 Business District,<br>Mumbai, Maharashtra 400001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 SwiftCourier. All rights reserved. | 
+                    <a href="#" class="hover:text-brand-orange transition-colors">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-brand-orange transition-colors">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
