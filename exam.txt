@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 hello 
 hello
 byeeeee
@@ -6,3 +7,13 @@ hello
 hello
 bye 
 bye
+=======
+bye 
+bye
+hello 
+Bye 
+Bye 
+Bye
+hello 
+hello
+>>>>>>> hello2
